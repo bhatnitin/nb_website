@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nitin Bhat | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reuse your global styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #2a2a2a;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #b5693d;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #cccccc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a.active {
+      font-weight: 700;
+      color: #a0522d;
+    }
+
+    nav a:hover {
+      color: #a0522d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .project-card {
+      display: flex;
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .project-card img {
+      width: 200px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      position: relative;
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    .project-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #a0522d;
+    }
+
+    .project-info p {
+      font-size: 1.05rem;
+      color: #cccccc;
+      line-height: 1.5;
+    }
+
+    .project-date {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.75rem;
+      color: #888;
+}
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 2rem;
+      font-size: 0.85rem;
+      color: #777;
+      background-color: #1e1e1e;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .project-card {
+        flex-direction: column;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Nitin Bhat</a>
+    <nav>
+      <a href="about.html">About Me</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="climbing.html">Climbing</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div class="project-list">
+
+      <a href="project-viewer.html?pdf=SAPRelay_Fix.pdf" class="project-card">
+        <img src="projects/Car_Relay.jpg" alt="Secondary Air Relay" />
+        <div class="project-info">
+          <span class="project-date">Jun 2025</span>
+          <h2>E92 Issues: Faulty Relays and a Broken Pump</h2>
+          <p>An electrical gremlin has kept my car emissions noncompliant. Using what I've learned in circuit theory-- analyzing BMW wiring diagrams and continuity testing countless harnesses- I finally fix an electrical issue that the shop claimed was "too difficult to diagnose". </p>
+        </div>
+      </a>
+
+      <a href="project-viewer.html?pdf=homewall.pdf" class="project-card">
+        <img src="projects/homewall.jpg" alt="Homewall" />
+        <div class="project-info">
+          <span class="project-date">Dec 2024</span>
+          <h2>Homewall Build</h2>
+          <p>A custom wooden framed climbing homewall designed to fit an irregular warehouse space-- completely designed and built from scratch</p>
+        </div>
+      </a>
+
+      <a href="project-viewer.html?pdf=crane.pdf" class="project-card">
+        <img src="projects/Crane.jpg" alt="Crane" />
+        <div class="project-info">
+          <span class="project-date">Mar 2025</span>
+          <h2>ENME304 - Model Crane</h2>
+          <p>A rotating crane with a worm-driven winch system. Created for a Machine Design class to test our abilities to use a low-powered DC motor for a high torque lifting application. Fully designed by me in Solidworks and PETG rapid-prototyped. </p>
+        </div>
+      </a>
+
+      <a href="project3.html" class="project-card">
+        <img src="projects/project3.jpg" alt="Project 3" />
+        <div class="project-info">
+          <span class="project-date">Oct 2024</span>
+          <h2>New Project</h2>
+          <p>Contents not yet available...</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    nitinbhat.com | 2025
+  </footer>
+
+</body>
+</html>

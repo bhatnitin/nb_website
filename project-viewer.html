@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header, footer {
+      background-color: #2a2a2a;
+      padding: 1rem;
+      text-align: center;
+    }
+    iframe {
+      flex-grow: 1;
+      width: 100%;
+      border: none;
+    }
+    header a {
+      color: #a0522d;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    header a:hover {
+      color: #a04422;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="projects.html"; text-decoration:none;">← Exit</a>
+  </header>
+
+  <iframe id="pdfViewer" src=""></iframe>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const pdfFile = params.get('pdf');
+    if (pdfFile) {
+      document.getElementById('pdfViewer').src = `projects/pdfs/${pdfFile}`;
+    } else {
+      document.getElementById('pdfViewer').outerHTML = '<p style="padding:2rem;">PDF not found.</p>';
+    }
+  </script>
+</body>
+</html>

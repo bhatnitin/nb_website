@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nitin Bhat | About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #2a2a2a;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #b5693d;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #cccccc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a.active {
+      font-weight: 700;
+      color: #a0522d;
+    }
+
+    nav a:hover {
+      color: #a0522d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .headshot {
+      flex: 1 1 250px;
+      max-width: 250px;
+    }
+
+    .headshot img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .bio {
+      flex: 2 1 400px;
+    }
+
+    .bio h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .bio p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #cccccc;
+    }
+
+    .bio a {
+      color: #a0522d;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+
+    .bio a:hover {
+      color: #a04422; /* Slightly darker on hover for feedback */
+    }
+
+    .links a {
+      margin-right: 1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .links img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0.9);
+    }
+
+    .links a:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 2rem;
+      font-size: 0.85rem;
+      color: #777;
+      background-color: #1e1e1e;
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .bio h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Nitin Bhat</a>
+    <nav>
+      <a href="about.html" class="active">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="climbing.html">Climbing</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="headshot">
+      <img src="pictures/headshot.jpg" alt="Nitin" />
+    </div>
+    <div class="bio">
+      <h1>About Me...</h1>
+      <p>
+        My name is Nitin — a Baltimore-based Mechanical Engineering student. I'm currently studying in undergrad at the University of Maryland, Baltimore County (Class of 2027).
+      </p>
+      <p>
+        I've created this website to try to catalogue some of my academic and personal endeavors. On here, I will try to detail my many school and personal projects, as well as my miscellaneous tinkering side-quests (expect a slew of BMW repairs).
+      </p>
+      <p>
+        I am currently CSWA certified (soon to be CSWP), and it's been a joy to learn the process of designing and testing components via Solidworks. I have just recently purchased a <a href="https://us.store.bambulab.com/products/a1" target="_blank">BambuLabs A1</a>, so expect lots of 3D Printing and design stuff to come!
+      </p>
+      <p>
+Check out the <strong>Projects</strong> and <strong>Blog</strong> tabs for more!
+      </p>
+	
+      <div class="links">
+        <a href="https://www.linkedin.com/in/nitin-bhat-757509313/" target="_blank" title="LinkedIn">
+          <img src="icons/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="NitinBhat_Resume_2025.pdf" download title="Resume">
+          <img src="icons/resume.png" alt="Resume" />
+        </a>
+        <a href="https://www.instagram.com/nitinjbhat/" target="_blank" title="Instagram">
+          <img src="icons/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.mountainproject.com/user/201429259/nitin-bhat" target="_blank" title="Mountain Project">
+          <img src="icons/mountainproject.png" alt="Mountain Project" />
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="text-align: right;">
+    nitinbhat.com | 2025
+  </footer>
+
+</body>
+</html>

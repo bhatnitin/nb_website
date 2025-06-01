@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nitin Bhat | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+header {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 650px; /* Slightly narrower to pull everything inward */
+  margin: 0 auto;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 3rem; /* More space between links */
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #b5693d;
+}
+
+header a {
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: 1.25rem;
+}
+
+header a:hover {
+  color: #a0522d;
+}
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  .headshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .degree {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+    color: #aaa;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2s;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2s;
+  }
+
+  .links a {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+
+  .links img {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0.9);
+  }
+
+  .links a:hover {
+    transform: scale(1.15);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 700px) {
+    .nav-wrapper {
+      flex-direction: column;
+      gap: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .nav-left, .nav-right {
+      gap: 1.5rem;
+    }
+
+    .logo {
+      position: static;
+      transform: none;
+      margin: 1rem 0;
+    }
+
+    .headshot {
+      width: 150px;
+      height: 150px;
+    }
+
+    .degree {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrapper">
+    <div class="nav-left">
+      <a href="climbing.html">Climbing</a>
+      <a href="blog.html">Blog</a>
+    </div>
+
+    <div class="logo">Nitin Bhat</div>
+
+    <div class="nav-right">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <div class="headshot">
+      <img src="pictures/headshot.jpg" alt="Nitin Bhat" />
+    </div>
+    <div class="degree">B.S. Mechanical Engineering (2027)</div>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/nitin-bhat-757509313/" target="_blank" title="LinkedIn">
+        <img src="icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="NitinBhat_Resume_2025.pdf" download title="Resume">
+        <img src="icons/resume.png" alt="Resume" />
+      </a>
+      <a href="https://www.instagram.com/nitinjbhat/" target="_blank" title="Instagram">
+        <img src="icons/instagram.png" alt="Instagram" />
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
